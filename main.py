@@ -24,7 +24,7 @@ class Main(QMainWindow, Ui_MainWindow):
             qp.end()
 
     def draw_flag(self, qp):
-        qp.setPen(QPen(Qt.yellow, 8, Qt.SolidLine))
+        qp.setPen(QPen(QColor(randint(0, 255), randint(0, 255), randint(0, 255)), 8, Qt.SolidLine))
         a = randint(10, min([self.width(), self.height()]) // 4)
         qp.drawEllipse(randint(self.width() // 4, self.width() * 3 // 4),
                        randint(self.height() // 4, self.height() * 3 // 4), a, a)
